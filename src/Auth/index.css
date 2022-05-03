@@ -1,0 +1,18 @@
+.signInPage {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+}
+input {
+    margin-bottom: 10px;
+}
+input:last-of-type {
+    margin-bottom: 20px;
+}
+button, input {
+    width: 100%;
+}
+.warning {
+    color: red;
+}
