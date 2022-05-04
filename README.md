@@ -18,7 +18,8 @@ Node.js is v16.14.2
 ## Usage
 
 Before using contacts-app you need to sing up. Or you can sign in by using initial email and password
+
 ```sh
-   1234@mail.ru
-   1234
+   Email: 1234@mail.ru
+   Password: 1234
 ```
