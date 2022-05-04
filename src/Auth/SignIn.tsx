@@ -11,12 +11,10 @@ export const SignIn: React.FC = () => {
 
     const addUser = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
         const user = {
             email: formRef.current!.email.value,
             password: formRef.current!.password.value,
         };
-
         await fetch("http://localhost:3001/login", {
             method: 'POST',
             body: JSON.stringify(user),

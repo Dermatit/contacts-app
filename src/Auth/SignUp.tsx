@@ -6,18 +6,17 @@ export const SignUp: React.FC = () => {
 
     const addUser = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         const user = ({
             username: formRef.current!.username.value,
             email: formRef.current!.email.value,
             password: formRef.current!.password.value,
         });
-
         await fetch("http://localhost:3001/register", {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {'Content-type': 'application/json'}
         });
+        formRef.current!.reset()
     };
 
     return (

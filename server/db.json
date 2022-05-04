@@ -1,13 +1,6 @@
 {
   "contacts": [
     {
-      "username": "Lohs",
-      "name": "fdsngsdnfg",
-      "phoneNumber": "dfngfsnndfgn",
-      "email": "sdfgndsfngsndfg",
-      "id": 5
-    },
-    {
       "username": "1234",
       "name": "Игнатий Таборов",
       "phoneNumber": "+79115672773",
@@ -28,12 +21,6 @@
       "password": "$2a$10$zs1PyPW14kKzZqy2qV7GAuFrLfna9mNRvO1TeZtD9qxXsyeJGkntq",
       "username": "1234",
       "id": 1
-    },
-    {
-      "email": "lohs@mail.ru",
-      "password": "$2a$10$dCQ353Je3wQOvWC75yPZQOELhm3J6unU/SFoCRytvCTsb5UP4AH9e",
-      "username": "Lohs",
-      "id": 2
     }
   ]
 }

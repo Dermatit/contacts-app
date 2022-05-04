@@ -15,8 +15,8 @@ export const Contact: React.FC<ContactProps> = memo(({elem}) => {
     const dispatch: AppDispatch = useDispatch();
     const username = useSelector((state:IReduxState) => state.username);
     const [isEdit, setIsEdit] = useState<boolean>(true);
+    
     const editMode = () => setIsEdit(!isEdit);
-
     const deleteContact = () => dispatch(deleteContactAction(elem.id));
 
     return (
