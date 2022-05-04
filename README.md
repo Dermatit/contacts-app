@@ -1,5 +1,6 @@
-<!-- GETTING STARTED -->
 ## Getting Started
+
+Node.js is v16.14.2
 
 1. Clone the repo
    ```sh
