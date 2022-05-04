@@ -9,24 +9,17 @@
     },
     {
       "username": "1234",
-      "name": "какашка",
-      "phoneNumber": "88005553535",
-      "email": "какашка@mail.ru",
-      "id": 11
+      "name": "Игнатий Таборов",
+      "phoneNumber": "+79115672773",
+      "email": "YppieA@mail.ru",
+      "id": 15
     },
     {
       "username": "1234",
-      "name": "лол",
-      "phoneNumber": "fghfgh",
-      "email": "fghfgh",
-      "id": 13
-    },
-    {
-      "username": "1234",
-      "name": "dfgdfgd546465",
-      "phoneNumber": "dfgdfg46564",
-      "email": "dfgdfgdfgg",
-      "id": 14
+      "name": "Барабашка",
+      "phoneNumber": "+88005553535",
+      "email": "Barabashka@mail.ru",
+      "id": 16
     }
   ],
   "users": [

@@ -1,5 +1,5 @@
 import './index.css';
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact as addContactAction } from "../../Redux/actions";
 import { IReduxState } from '../../Redux/types';
@@ -10,7 +10,8 @@ export const AddContact: React.FC = () => {
     const formRef = useRef<HTMLFormElement>(null);
     const username = useSelector((state: IReduxState) => state.username);
 
-    const addContact = async () => {
+    const addContact = async (e:FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         const contact = ({
             username: username,
             name: formRef.current!.contactName.value,
@@ -18,17 +19,18 @@ export const AddContact: React.FC = () => {
             email: formRef.current!.email.value
         });
         dispatch(addContactAction(contact));
+        formRef.current!.reset()
     };
 
     return (
-        <div className='addContact'>
-            <p className='username'>{username}</p>
-            <form ref={formRef}>
-                <div>Имя <input type='text' name='contactName'/></div>
-                <div>Номер телефона <input type='text' name='phoneNumber'/></div>
-                <div>Email <input type='text' name='email'/></div>
+        <div className='add-contact'>
+            <form ref={formRef} onSubmit={e => addContact(e)}>
+                <div><p>Добавьте контакт</p><p>{username}</p></div>
+                <input type='text' name='contactName' maxLength={40} placeholder='Имя' />
+                <input type='text' name='phoneNumber' maxLength={40} placeholder='Номер телефона'/>
+                <input type='text' name='email' maxLength={40} placeholder='Email'/>
+                <button type='submit'>Добавить</button>
             </form>
-            <button onClick={addContact}>Добавить</button>
         </div>
     )
 }

@@ -29,11 +29,10 @@ export const SignIn: React.FC = () => {
 
     return (    
         <div className='signInPage'>
-            <form ref={formRef} onSubmit={e => addUser(e)}>
-                <p>Вход</p>
-                <div><input type="text" name='email' placeholder='Введите email'/></div>
-                <div><input type="password" name='password' placeholder='Введите пароль'/></div>
-                <button type='submit'>Войти</button>
+            <form className='auth-form' ref={formRef} onSubmit={e => addUser(e)}>
+                <input className='auth-input' type="text" name='email' placeholder='Введите email'/>
+                <input className='auth-input' type="password" name='password' placeholder='Введите пароль'/>
+                <button className='auth-button' type='submit'>Войти</button>
             </form>
             <p className='warning'>{warning}</p>
         </div>

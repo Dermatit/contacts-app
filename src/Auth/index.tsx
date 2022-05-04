@@ -6,12 +6,14 @@ export const Auth = () => {
   const [authSelect, setAuthSelect] = useState<boolean>(true);
   
   return (
-    <main>
-      <div className='authSelect'>
-        <button onClick={()=>setAuthSelect(true)}>Вход</button>
-        <button onClick={()=>setAuthSelect(false)}>Регистрация</button>
+    <div className='auth-container'>
+      <div className='auth'>
+        <div className='authSelect'>
+          <button style={authSelect ? { background : 'white', color: 'black'} : {}} className='auth-select-button' onClick={()=>setAuthSelect(true)}>Вход</button>
+          <button style={!authSelect ? { background : 'white', color: 'black'} : {}} className='auth-select-button' onClick={()=>setAuthSelect(false)}>Регистрация</button>
+        </div>
+        {authSelect ? <SignIn/> : <SignUp/>}
       </div>
-      {authSelect ? <SignIn/> : <SignUp/>}
-    </main>
+    </div>
   );
 }

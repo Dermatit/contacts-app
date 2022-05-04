@@ -20,9 +20,9 @@ export const Contact: React.FC<ContactProps> = memo(({elem}) => {
     const deleteContact = () => dispatch(deleteContactAction(elem.id));
 
     return (
-        <div>
+        <div className='contact-container'>
             {isEdit? <ContactDefault {...elem} editMode={editMode}/> : <ContactEdit {...elem} editMode={editMode} username={username}/>}
-            <button onClick={() => deleteContact()}>x</button>
+            <button className='delete-contact' onClick={() => deleteContact()}>x</button>
         </div>
     )
 })

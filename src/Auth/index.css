@@ -1,18 +1,58 @@
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth {
+    width: 450px;
+}
+.authSelect {
+    display: flex;
+} 
 .signInPage {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    align-items: center;
-}
-input {
-    margin-bottom: 10px;
-}
-input:last-of-type {
-    margin-bottom: 20px;
-}
-button, input {
-    width: 100%;
 }
 .warning {
     color: red;
+}
+
+.auth-button, .auth-select-button  {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #5975ff;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+.auth-select-button:first-of-type {
+    margin-right: 5px;
+}
+.auth-select-button:last-of-type {
+    margin-left: 5px;
+}
+.auth-form {
+    min-width: 100%;
+}
+
+.auth-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0px;
+}
+.auth-input:last-of-type {
+    margin-bottom: 20px;
+}
+.auth-input:first-of-type {
+    margin-top: 20px;
+}
+.auth-input:active, :focus {
+    outline: 0;
+    outline-offset: 0;
 }

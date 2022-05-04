@@ -4,9 +4,9 @@ import './index.css';
 
 export const ContactsPage: React.FC = () => {
     return (
-        <>
+        <div className='contacts-container'>
             <AddContact/>
             <Contacts/>
-        </>
+        </div>
     )
 }

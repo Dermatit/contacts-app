@@ -25,16 +25,18 @@ export const ContactEdit: React.FC<ContactEditProps> = ({name, phoneNumber, emai
     }
 
     return (
-        <div className="contact">
-            <form ref={formRef}>
-                <input type='text' name='contactName' defaultValue={name}/>
-                <input type='text' name='phoneNumber' defaultValue={phoneNumber}/>
-                <input type='text' name='email' defaultValue={email}/>
-            </form>
-            <div style={{display : 'flex'}}>
+        <>
+            <div className="contact">
+                <form ref={formRef}>
+                    <input type='text' name='contactName' maxLength={40} defaultValue={name}/>
+                    <input type='text' name='phoneNumber' maxLength={40} defaultValue={phoneNumber}/>
+                    <input type='text' name='email' maxLength={40} defaultValue={email}/>
+                </form>
+            </div>
+            <div className="contact-edit-button">
                 <button onClick={() => editMode()}>Назад</button>
                 <button onClick={() => acceptEdit()}>Ок</button>
             </div>
-        </div>
+        </>
     );
 }
