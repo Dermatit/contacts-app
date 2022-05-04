@@ -10,20 +10,20 @@
    ```sh
    npm i
    ```
-3. Start contacts-app and json-server
+3. Start app and json-server
    ```sh
    npm run dev
    ```
 
 ## Usage
 
-Before using contacts-app you need to sing up. Or you can sign in by using initial email and password
+Before using app you have to sign up. Or you can sign in by using initial email and password
 
 1. Email
    ```sh
-      1234@mail.ru
+   1234@mail.ru
    ```
 2. Password
    ```sh
-      1234
+   1234
    ```
