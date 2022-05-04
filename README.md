@@ -1,6 +1,6 @@
 ## Getting Started
 
-Node.js is v16.14.2
+**Node.js version is 16.14.2**
 
 1. Clone the repo
    ```sh
@@ -19,9 +19,11 @@ Node.js is v16.14.2
 
 Before using contacts-app you need to sing up. Or you can sign in by using initial email and password
 
-```sh
-   Email: 1234@mail.ru
-```
-```sh
-   Password: 1234
-```
+1. Email
+   ```sh
+      1234@mail.ru
+   ```
+2. Password
+   ```sh
+      1234
+   ```
