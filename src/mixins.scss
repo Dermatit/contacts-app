@@ -1,0 +1,18 @@
+@mixin beauty-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #5975ff;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+@mixin beauty-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0px;
+}

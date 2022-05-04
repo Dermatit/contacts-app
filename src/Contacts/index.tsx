@@ -1,6 +1,6 @@
 import { AddContact } from "./ContactAdd/AddContact";
 import { Contacts } from "./Contacts";
-import './index.css';
+import './index.scss';
 
 export const ContactsPage: React.FC = () => {
     return (
@@ -8,5 +8,5 @@ export const ContactsPage: React.FC = () => {
             <AddContact/>
             <Contacts/>
         </div>
-    )
-}
+    );
+};

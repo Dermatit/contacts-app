@@ -4,7 +4,7 @@ export interface IContact {
     phoneNumber: string,
     email: string,
     id: number
-}
+};
 export interface IReduxState {
     contacts: IContact[],
     username: string,

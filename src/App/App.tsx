@@ -1,4 +1,3 @@
-import './App.css';
 import { Auth } from '../Auth/index';
 import { ContactsPage } from '../Contacts';
 import { useSelector } from 'react-redux';
@@ -12,4 +11,4 @@ export const App: React.FC = () => {
       {isAuth ? <ContactsPage/> : <Auth/>}
     </main>
   );
-}
+};

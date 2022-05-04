@@ -6,6 +6,6 @@ interface SearchBoxProps {
 
 export const SearchBox: React.FC<SearchBoxProps> = memo(({onSearchChange}) => {
     return (
-        <input className='search-box' type='search' placeholder='Найти контакт' onChange={e => onSearchChange(e)}/>
+        <input type='search' placeholder='Найти контакт' onChange={e => onSearchChange(e)}/>
     );
 });

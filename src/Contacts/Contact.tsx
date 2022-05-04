@@ -9,7 +9,7 @@ import { IContact } from  '../Redux/types';
 
 interface ContactProps {
     elem: IContact
-}
+};
 
 export const Contact: React.FC<ContactProps> = memo(({elem}) => {
     const dispatch: AppDispatch = useDispatch();
@@ -24,5 +24,5 @@ export const Contact: React.FC<ContactProps> = memo(({elem}) => {
             {isEdit? <ContactDefault {...elem} editMode={editMode}/> : <ContactEdit {...elem} editMode={editMode} username={username}/>}
             <button className='delete-contact' onClick={() => deleteContact()}>x</button>
         </div>
-    )
-})
+    );
+});

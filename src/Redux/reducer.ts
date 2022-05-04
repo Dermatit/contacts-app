@@ -4,7 +4,7 @@ const initialState: IReduxState = {
     contacts: [],
     username: '',
     isAuth: false
-}
+};
 
 const contactsReducer = (state = initialState, action: ContactAction): IReduxState => {
     switch(action.type) {
@@ -43,7 +43,7 @@ const contactsReducer = (state = initialState, action: ContactAction): IReduxSta
             };
         };
         default: return state;
-    }
-}
+    };
+};
 
 export const rootReducer = contactsReducer;

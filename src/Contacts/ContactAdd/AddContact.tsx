@@ -32,5 +32,5 @@ export const AddContact: React.FC = () => {
                 <button type='submit'>Добавить</button>
             </form>
         </div>
-    )
-}
+    );
+};

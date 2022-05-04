@@ -1,4 +1,3 @@
-import './index.css';
 import { FormEvent, useRef, useState } from 'react';
 import { useDispatch } from "react-redux";
 import { loadContacts } from "../Redux/actions";
@@ -28,13 +27,13 @@ export const SignIn: React.FC = () => {
     };
 
     return (    
-        <div className='signInPage'>
-            <form className='auth-form' ref={formRef} onSubmit={e => addUser(e)}>
-                <input className='auth-input' type="text" name='email' placeholder='Введите email'/>
-                <input className='auth-input' type="password" name='password' placeholder='Введите пароль'/>
-                <button className='auth-button' type='submit'>Войти</button>
+        <div className='sign-in'>
+            <form ref={formRef} onSubmit={e => addUser(e)}>
+                <input type="text" name='email' placeholder='Введите email'/>
+                <input type="password" name='password' placeholder='Введите пароль'/>
+                <button type='submit'>Войти</button>
             </form>
-            <p className='warning'>{warning}</p>
+            <p>{warning}</p>
         </div>
     );
 }

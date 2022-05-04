@@ -22,5 +22,5 @@ export const Contacts: React.FC = () => {
             <SearchBox onSearchChange={onSearchChange}/>
             {filteredContacts.map(elem => <Contact key={elem.id} elem={elem}/>)}
         </div>
-    )
-}
+    );
+};

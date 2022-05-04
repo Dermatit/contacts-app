@@ -1,4 +1,3 @@
-import './index.css';
 import { FormEvent, useRef } from 'react';
 
 export const SignUp: React.FC = () => {
@@ -22,12 +21,12 @@ export const SignUp: React.FC = () => {
     };
 
     return (
-        <div className='signInPage'>
+        <div className='sign-up'>
             <form ref={formRef} onSubmit={e => addUser(e)}>
-                <input className='auth-input' type="text" name='username' placeholder='Введите имя'/>
-                <input className='auth-input' type="text" name='email' placeholder='Введите email'/>
-                <input className='auth-input' type="password" name='password' placeholder='Введите пароль'/>
-                <button className='auth-button' type='submit'>Зарегистрироваться</button>
+                <input type="text" name='username' placeholder='Введите имя'/>
+                <input type="text" name='email' placeholder='Введите email'/>
+                <input type="password" name='password' placeholder='Введите пароль'/>
+                <button type='submit'>Зарегистрироваться</button>
             </form>
         </div>
     );

@@ -1,6 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import { App } from './App/App';
 
 import thunk, { ThunkDispatch } from 'redux-thunk';
@@ -10,7 +9,7 @@ import { rootReducer } from './Redux/reducer';
 import { ContactAction } from './Redux/types';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
-export type AppDispatch = Dispatch<ContactAction> & ThunkDispatch<typeof store, null, ContactAction>
+export type AppDispatch = Dispatch<ContactAction> & ThunkDispatch<typeof store, null, ContactAction>;
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement);
 
