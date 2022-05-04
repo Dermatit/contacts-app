@@ -26,8 +26,4 @@ Before using app you have to sign up. Or you can sign in by using initial email 
 2. Password
    ```sh
    1234
-   ```
-<<<<<<< HEAD
-
-=======
->>>>>>> cb545ea423fe60324305bf6884435f2ef24746d7
+   ``
