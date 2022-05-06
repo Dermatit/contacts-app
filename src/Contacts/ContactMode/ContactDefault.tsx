@@ -1,10 +1,10 @@
 import { IContact } from '../../Redux/types'
 
 interface ContactDefaultProps extends IContact {
-    editMode(): void
+	toggleEdit(): void
 };
 
-export const ContactDefault: React.FC<ContactDefaultProps> = ({name, phoneNumber, email, editMode}) => {
+export const ContactDefault: React.FC<ContactDefaultProps> = ({name, phoneNumber, email, toggleEdit}) => {
     return (
         <>
             <div className="contact">
@@ -12,7 +12,7 @@ export const ContactDefault: React.FC<ContactDefaultProps> = ({name, phoneNumber
                 <p>{phoneNumber}</p>
                 <p>{email}</p>
             </div>
-            <button onClick={() => editMode()}>Редактировать</button>
+            <button onClick={toggleEdit}>Редактировать</button>
         </>
     );
 };

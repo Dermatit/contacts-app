@@ -11,6 +11,9 @@ export const Contacts: React.FC = () => {
 
     const onSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setSearchBox(e.target.value), []);
 
+		// здесь вообще херня какая-то непонятная происходить
+		// избегай одинакового названия аргументов, тут везде elem...
+		// ну и тут слишком много циклом, 100% есть способ легче сделать
     const filteredContacts: IContact[] = contacts.filter(elem => 
         Object.values(elem).map(elem => 
             elem.toString().toLowerCase().includes(searchBox.toLowerCase())).some((elem => 

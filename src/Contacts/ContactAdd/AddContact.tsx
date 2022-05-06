@@ -13,13 +13,13 @@ export const AddContact: React.FC = () => {
     const addContact = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const contact = ({
-            username: username,
+            username,
             name: formRef.current!.contactName.value,
             phoneNumber: formRef.current!.phoneNumber.value,
             email: formRef.current!.email.value
         });
         dispatch(addContactAction(contact));
-        formRef.current!.reset()
+        formRef.current!.reset();
     };
 
     return (

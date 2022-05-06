@@ -9,12 +9,11 @@ const initialState: IReduxState = {
 const contactsReducer = (state = initialState, action: ContactAction): IReduxState => {
     switch(action.type) {
         case ContactActionTypes.LOAD_CONTACTS: {
-            const contactsNew = action.data.map(elem => elem);
             return {
                 ...state,
-                contacts: contactsNew,
+                contacts: action.data,
                 username: action.username,
-                isAuth: true
+                isAuth: true,
             };
         };
         case ContactActionTypes.ADD_CONTACT: {
@@ -26,20 +25,20 @@ const contactsReducer = (state = initialState, action: ContactAction): IReduxSta
         };
         case ContactActionTypes.DELETE_CONTACT: {
             const contactIndex = state.contacts.findIndex(elem => elem.id === action.id);
-            const filteredContacts = [...state.contacts];
-            filteredContacts.splice(contactIndex, 1);
+            const newContacts = [...state.contacts];
+            newContacts.splice(contactIndex, 1);
             return {
                 ...state,
-                contacts: filteredContacts
+                contacts: newContacts,
             };
         };
         case ContactActionTypes.EDIT_CONTACT: {
             const contactIndex = state.contacts.findIndex(elem => elem.id === action.id);
-            const filteredContacts = [...state.contacts];
-            filteredContacts.splice(contactIndex, 1, action.contact);
+            const newContacts = [...state.contacts];
+            newContacts.splice(contactIndex, 1, action.contact);
             return {
                 ...state,
-                contacts: filteredContacts
+                contacts: newContacts
             };
         };
         default: return state;

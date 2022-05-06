@@ -5,10 +5,10 @@ import { IContact } from '../../Redux/types'
 import { AppDispatch } from '../../'
 
 interface ContactEditProps extends IContact{
-    editMode(): void
+	toggleEdit(): void
 }
 
-export const ContactEdit: React.FC<ContactEditProps> = ({name, phoneNumber, email, id, editMode, username}) => {
+export const ContactEdit: React.FC<ContactEditProps> = ({name, phoneNumber, email, id, toggleEdit, username}) => {
     const dispatch: AppDispatch = useDispatch();
     const formRef = useRef<HTMLFormElement>(null);
 
@@ -18,10 +18,10 @@ export const ContactEdit: React.FC<ContactEditProps> = ({name, phoneNumber, emai
             name: formRef.current!.contactName.value,
             phoneNumber: formRef.current!.phoneNumber.value,
             email: formRef.current!.email.value,
-            id: id
+            id,
         }
         dispatch(editContact(id, contact));
-        editMode();
+        toggleEdit();
     }
 
     return (
@@ -34,8 +34,8 @@ export const ContactEdit: React.FC<ContactEditProps> = ({name, phoneNumber, emai
                 </form>
             </div>
             <div className="contact-edit-button">
-                <button onClick={() => editMode()}>Назад</button>
-                <button onClick={() => acceptEdit()}>Ок</button>
+                <button onClick={toggleEdit}>Назад</button>
+                <button onClick={acceptEdit}>Ок</button>
             </div>
         </>
     );

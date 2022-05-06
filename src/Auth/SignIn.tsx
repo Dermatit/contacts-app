@@ -15,18 +15,22 @@ export const SignIn: React.FC = () => {
             email: formRef.current!.email.value,
             password: formRef.current!.password.value,
         };
-        await fetch("http://localhost:3001/login", {
-            method: 'POST',
-            body: JSON.stringify(user),
-            headers: {'Content-type': 'application/json'}
+        const response = await fetch("http://localhost:3001/login", {
+					method: 'POST',
+					body: JSON.stringify(user),
+					headers: {'Content-type': 'application/json'}
         })
-        .then(res => res.json())
-        .then(data => typeof data === 'string' ? setWarning(data) : dispatch(loadContacts(data.user.username)));
+
+				const data = await response.json();
+
+        typeof data === 'string' 
+					? setWarning(data) 
+					: dispatch(loadContacts(data.user.username));
     };
 
     return (    
         <div className='sign-in'>
-            <form ref={formRef} onSubmit={e => addUser(e)}>
+            <form ref={formRef} onSubmit={addUser}>
                 <input type="text" name='email' placeholder='Введите email'/>
                 <input type="password" name='password' placeholder='Введите пароль'/>
                 <button type='submit'>Войти</button>

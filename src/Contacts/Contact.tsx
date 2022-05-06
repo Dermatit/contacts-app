@@ -14,14 +14,15 @@ interface ContactProps {
 export const Contact: React.FC<ContactProps> = memo(({elem}) => {
     const dispatch: AppDispatch = useDispatch();
     const username = useSelector((state:IReduxState) => state.username);
-    const [isEdit, setIsEdit] = useState<boolean>(true);
+    const [editing, setEditing] = useState<boolean>(true);
     
-    const editMode = () => setIsEdit(!isEdit);
+		// тут в принципе тоже в useCallback можно оборачивать
+    const toggleEdit = () => setEditing(prevState => !prevState);
     const deleteContact = () => dispatch(deleteContactAction(elem.id));
 
     return (
         <div className='contact-container'>
-            {isEdit? <ContactDefault {...elem} editMode={editMode}/> : <ContactEdit {...elem} editMode={editMode} username={username}/>}
+            {editing? <ContactDefault {...elem} toggleEdit={toggleEdit}/> : <ContactEdit {...elem} toggleEdit={toggleEdit} username={username}/>}
             <button className='delete-contact' onClick={() => deleteContact()}>x</button>
         </div>
     );

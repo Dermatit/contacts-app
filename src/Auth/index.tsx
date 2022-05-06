@@ -10,6 +10,7 @@ export const Auth = () => {
     <div className='auth-container'>
       <div className='auth'>
         <div className='auth-select'>
+					{/* тут можно красивее сделать наверное (мне лень разбираться) */}
           <button style={authSelect ? { background : 'white', color: 'black'} : {}} onClick={()=>setAuthSelect(true)}>Вход</button>
           <button style={!authSelect ? { background : 'white', color: 'black'} : {}} onClick={()=>setAuthSelect(false)}>Регистрация</button>
         </div>
